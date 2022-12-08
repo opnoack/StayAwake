@@ -10,7 +10,8 @@
 		B8A5291D294163E800934E02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5291C294163E800934E02 /* AppDelegate.swift */; };
 		B8A5291F294163E800934E02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5291E294163E800934E02 /* ViewController.swift */; };
 		B8A52921294163EA00934E02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8A52920294163EA00934E02 /* Assets.xcassets */; };
-		B8A52924294163EA00934E02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8A52922294163EA00934E02 /* Main.storyboard */; };
+		B8A5292C294164E500934E02 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5292B294164E500934E02 /* main.swift */; };
+		B8A5292E294165C900934E02 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A5292D294165C900934E02 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,8 +19,9 @@
 		B8A5291C294163E800934E02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8A5291E294163E800934E02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8A52920294163EA00934E02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B8A52923294163EA00934E02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8A52925294163EA00934E02 /* StayAwake.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StayAwake.entitlements; sourceTree = "<group>"; };
+		B8A5292B294164E500934E02 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		B8A5292D294165C900934E02 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,8 +57,9 @@
 				B8A5291C294163E800934E02 /* AppDelegate.swift */,
 				B8A5291E294163E800934E02 /* ViewController.swift */,
 				B8A52920294163EA00934E02 /* Assets.xcassets */,
-				B8A52922294163EA00934E02 /* Main.storyboard */,
 				B8A52925294163EA00934E02 /* StayAwake.entitlements */,
+				B8A5292B294164E500934E02 /* main.swift */,
+				B8A5292D294165C900934E02 /* SwiftUIView.swift */,
 			);
 			path = StayAwake;
 			sourceTree = "<group>";
@@ -120,7 +123,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8A52921294163EA00934E02 /* Assets.xcassets in Resources */,
-				B8A52924294163EA00934E02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,21 +135,12 @@
 			files = (
 				B8A5291F294163E800934E02 /* ViewController.swift in Sources */,
 				B8A5291D294163E800934E02 /* AppDelegate.swift in Sources */,
+				B8A5292E294165C900934E02 /* SwiftUIView.swift in Sources */,
+				B8A5292C294164E500934E02 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		B8A52922294163EA00934E02 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				B8A52923294163EA00934E02 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		B8A52926294163EA00934E02 /* Debug */ = {
@@ -271,18 +264,20 @@
 				CODE_SIGN_ENTITLEMENTS = StayAwake/StayAwake.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9NM3RQ3TYK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverphilippnoack.StayAwake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -298,18 +293,20 @@
 				CODE_SIGN_ENTITLEMENTS = StayAwake/StayAwake.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = 9NM3RQ3TYK;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSMainStoryboardFile = "";
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.oliverphilippnoack.StayAwake;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
