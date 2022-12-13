@@ -32,7 +32,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         if let button = statusItem.button {
-            button.image = NSImage(systemSymbolName: "mug", accessibilityDescription: "StayAwake")
+            button.image = NSImage(systemSymbolName: "sun.max", accessibilityDescription: "StayAwake")
         }
         setupMenus(statusText: "Off", toggleText: "On")
     }
@@ -56,12 +56,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     @objc func toggleStatus() {
         if oldStatus == 0 {
-            changeStatusBarButton(buttonName: "mug.fill")
+            changeStatusBarButton(buttonName: "sun.max.fill")
             setupMenus(statusText: "On", toggleText: "Off")
             shell("caffeinate -disu &>/dev/null")
             oldStatus = 1
         } else {
-            changeStatusBarButton(buttonName: "mug")
+            changeStatusBarButton(buttonName: "sun.max")
             setupMenus(statusText: "Off", toggleText: "On")
             shell("killall caffeinate >/dev/null")
             oldStatus = 0
